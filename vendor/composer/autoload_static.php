@@ -19,6 +19,10 @@ class ComposerStaticInitbdc4072e93fdb722eb826368856dd04f
         array (
             'Symfony\\Polyfill\\Ctype\\' => 23,
         ),
+        'F' => 
+        array (
+            'Faker\\' => 6,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -29,6 +33,10 @@ class ComposerStaticInitbdc4072e93fdb722eb826368856dd04f
         'Symfony\\Polyfill\\Ctype\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
+        ),
+        'Faker\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker',
         ),
     );
 
