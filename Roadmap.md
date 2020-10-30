@@ -35,6 +35,7 @@ Le temps notifié est le temps de code, prenant en compte le temps nécessaire �
     - <span style="color:#34c924">[FRONT]</span> - Modale changement avatar - <span style="color:orange">**1h / 0.125d**</span>
   - <span style="color:#34c924">[FRONT]</span> - Onglets paramètres
   - <span style="color:#34c924">[FRONT]</span> - Onglet commentaires
+  - <span style="color:#536289">[BACK]</span> - Traitement des requêtes - <span style="color:orange">**3h / 0.375d**</span>
 - <span style="color:#34c924">[FRONT]</span> - Création page ajout post - <span style="color:red">**6h / 0.75d**</span>
   - <span style="color:#34c924">[FRONT]</span> - Création formulaire - <span style="color:orange">**2h / 0.25d**</span>
   - <span style="color:#536289">[BACK]</span> - Traitement de la requête - <span style="color:orange">**4h / 0.5d**</span>
