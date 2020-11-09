@@ -1,0 +1,219 @@
+/* Presets */
+body {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-size: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #0e0e0e;
+    line-height: 1;
+    font-family: Roboto, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+@media (max-width: 1259px) {
+    .container {
+        width: calc(100% - 60px);
+        max-width: 100vw;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+}
+
+/* HEADER */
+
+header {
+    background-color: #080808;
+    box-shadow: #0d0d0d 1px 1px 16px 1px;
+    height: 80px;
+    padding: 15px 0;
+    box-sizing: border-box;
+}
+
+header .header-title,
+header .header-nav {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+header .header-title {
+    width: max-content;
+    font-size: 32px;
+    color: #fff;
+    line-height: 50px;
+}
+
+header .header-nav {
+    width: max-content;
+    float: right;
+    top: 16px;
+    position: relative;
+}
+
+header .header-nav .header-nav-element {
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    /* transition: 0.3s ease-in-out; */
+    line-height: 1;
+}
+
+header .header-nav .header-nav-element:hover {
+    /* border-bottom: 2px solid #fff; */
+    /* transition: 0.3s ease-in-out; */
+}
+
+header .header-nav .header-nav-element:not(:last-child) {
+    margin-right: 15px;
+}
+
+header .header-nav .header-nav-element .nav-elem-underline {
+    height: 3px;
+    width: 0px;
+    transition: width 0.2s ease-in-out;
+    background-color: #fff;
+}
+
+header .header-nav .header-nav-element:hover .nav-elem-underline,
+header .header-nav .header-nav-element:active .nav-elem-underline,
+header .header-nav .header-nav-element:focus .nav-elem-underline {
+    display: block;
+    width: 100%;
+    transition: width 0.2s ease-in-out;
+}
+
+#mini-menu-toggle {
+    display: none;
+}
+
+@media (max-width: 799px) {
+    header .header-nav {
+        display: block;
+        padding: 15px;
+        background-color: #222;
+        position: absolute;
+        right: 0;
+        transform: translateY(calc(-100% - 30px));
+        transition: transform 0.3s ease-in-out;
+        z-index: -1;
+    }
+
+    header .header-nav.first {
+        transition: transform 0s;
+    }
+
+    header .header-nav .header-nav-element {
+        display: block;
+        padding: 5px 10px;
+        text-align: center;
+        margin: 0;
+        padding: 5px 30px;
+    }
+
+    #mini-menu-toggle {
+        display: block;
+        float: right;
+        width: 24px;
+        height: 18px;
+        cursor: pointer;
+        position: relative;
+        top: 16px;
+        z-index: 1;
+    }
+
+    #mini-menu-toggle.opened {
+        width: 18px;
+    }
+
+    #mini-menu-toggle,
+    #mini-menu-toggle.opened {
+        transition: width 0.3s ease-in-out;
+    }
+
+    #mini-menu-toggle div {
+        width: 24px;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+
+    #mini-menu-toggle div:nth-child(1),
+    #mini-menu-toggle div:nth-child(3) {
+        transform: rotate(0deg);
+        transform-origin: left;
+    }
+
+    #mini-menu-toggle div:nth-child(1),
+    #mini-menu-toggle div:nth-child(3),
+    #mini-menu-toggle.opened div:nth-child(1),
+    #mini-menu-toggle.opened div:nth-child(3) {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    #mini-menu-toggle div:nth-child(2),
+    #mini-menu-toggle.opened div:nth-child(2) {
+        transition: width 0.3s ease-in-out;
+    }
+
+    #mini-menu-toggle div:nth-child(1) {
+        top: 0;
+    }
+
+    #mini-menu-toggle div:nth-child(2) {
+        top: 8px;
+    }
+
+    #mini-menu-toggle div:nth-child(3) {
+        bottom: 0;
+    }
+
+    #mini-menu-toggle.opened div:nth-child(1) {
+        transform: rotate(45deg);
+        transform-origin: left;
+        top: -1px;
+    }
+
+    #mini-menu-toggle.opened div:nth-child(2) {
+        width: 0;
+    }
+
+    #mini-menu-toggle.opened div:nth-child(3) {
+        transform: rotate(-45deg);
+        transform-origin: left;
+    }
+
+    #mini-menu-toggle.opened +.header-nav {
+        transform: translateY(50px);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    #mini-menu-toggle.opened +.header-nav .header-nav-element {
+
+    }
+
+    header .header-nav .header-nav-element {
+        margin: 5px 0;
+    }
+}
+
+/* MAIN */
+
+main {
+    min-height: calc(100vh - 80px);
+    z-index: 1;
+}
