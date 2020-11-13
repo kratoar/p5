@@ -26,7 +26,7 @@
                 </a>
             {% endif %}
             <div class="header-nav-element ts-lg tw-medium">
-                {{ user.isLoged() ? 'Logout' : 'Login' }}
+                {{- user.isLoged() ? 'Logout' : 'Login' -}}
                 <div class="nav-elem-underline"></div>
             </div>
         </div>

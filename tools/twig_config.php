@@ -6,7 +6,7 @@
 
     // ADD GLOBAL VARIABLES
 
-    // $twig->addGlobal(name, var);
+    $twig->addGlobal('tech_list', $GLOBALS['app']->getDefaultTechList());
 
     // ADD FILTERS
 
