@@ -286,6 +286,23 @@
             return $temp;
         }
 
+        /**
+         * Short - Get the default tech list
+         * 
+         * Detailed - 
+         * 
+         * @return tech_list The current default tech list
+         */
+        public function getDefaultTechList()
+        {
+            $temp = [];
+            foreach(scandir(self::DEFAULT['ICONS_PATH']) as $value)
+            {
+                !in_array($value, ['.', '..']) && array_push($temp, pathinfo($value, PATHINFO_FILENAME));
+            }
+            return $temp;
+        }
+
         private $mode;
 
         const DEFAULT = [

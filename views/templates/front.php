@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>{{ title }} | Tech blog</title>
+        <title>{{- title -}} | Tech blog</title>
         <meta charset="utf-8"/>
         <link rel="stylesheet" href="./public/css/main.css"/>
         <!-- <script src="./public/js/tagbar.js"></script> -->
@@ -16,5 +16,6 @@
             {% endblock %} 
         </main>
         {#% include('./components/tagbar.php') %#}
+        {% include('./components/footer.php') %}
     </body>
 </html>
